@@ -4,6 +4,7 @@
 
 ```
 npm install
+sudo npm install webpack -g
 ```
 
 ## Build command
