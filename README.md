@@ -1,5 +1,7 @@
 # radio-stations-mapping
 
+You need to have [https://www.npmjs.com/](npm) and Node installed.
+
 ## Project setup
 
 ```
