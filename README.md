@@ -21,6 +21,8 @@ npm install webpack-dev-server -g
 
 To start the dev server, type `webpack-dev-server --progress --colors`. Point your browser to `http://localhost:8080/public/`.
 
+If port `8080` is already in use on the host system, specify an alternative port by appending, e.g., `--port 8081` to the command.
+
 ## Build command
 
 ```
