@@ -13,6 +13,8 @@ npm install webpack -g
 
 ### Webpack dev server (optional)
 
+As root:
+
 ```
 npm install webpack-dev-server -g
 ```
