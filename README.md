@@ -1,22 +1,27 @@
 # radio-stations-mapping
 
-You need to have [https://www.npmjs.com/](npm) and Node installed.
+To build the project, you need to have [npm](https://www.npmjs.com/) and [Node](https://nodejs.org/) installed.
 
 ## Project setup
 
 ```
 npm install
-sudo npm install webpack -g
+npm install webpack -g
 ```
+
+(The second command may need to be run as root.)
 
 ### Webpack dev server (optional)
 
 ```
-sudo npm install webpack-dev-server -g
+npm install webpack-dev-server -g
 ```
+
+To start the dev server, type `webpack-dev-server --progress --colors`. Point your browser to `http://localhost:8080/public/`.
 
 ## Build command
 
 ```
 webpack
 ```
+
