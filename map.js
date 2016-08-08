@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Map, Marker, GeoJson, Popup, TileLayer }
+import { Map, Marker, GeoJSON, Popup, TileLayer }
   from 'react-leaflet'
 import { connect }
   from 'react-redux'
@@ -40,11 +40,11 @@ class LeafletMap extends React.Component {
       <Map {...mapProps} style={styles.map}>
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> cows'
         />
         {stations.visible.map((station, i) => (
           <span key={"y"+i}>
-            <GeoJson key={"x"+i} data={station.geoJson} / >
+            <GeoJSON key={"x"+i} data={station.geoJson} / >
             <Marker key={i} position={station.position}>
               <Popup>
                 <span>{station.name}</span>
