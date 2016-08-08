@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Map, Marker, Popup, TileLayer } 
+import { Map, Marker, GeoJson, Popup, TileLayer }
   from 'react-leaflet'
 import { connect }
   from 'react-redux'
@@ -19,11 +19,11 @@ class LeafletMap extends React.Component {
     if (stations.selected) {
       return {
         center: stations.selected.position,
-        zoom: 12,
+        zoom: 10,
       }
     } else if (countries.selected) {
       return {
-        center: countries.selected.position, 
+        center: countries.selected.position,
         zoom: 6,
       }
     } else {
@@ -43,11 +43,14 @@ class LeafletMap extends React.Component {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         {stations.visible.map((station, i) => (
-          <Marker key={i} position={station.position}>
-            <Popup>
-              <span>{station.name}</span>
-            </Popup>
-          </Marker>
+          <span key={"y"+i}>
+            <GeoJson key={"x"+i} data={station.geoJson} / >
+            <Marker key={i} position={station.position}>
+              <Popup>
+                <span>{station.name}</span>
+              </Popup>
+            </Marker>
+          </span>
         ))}
       </Map>
     )
